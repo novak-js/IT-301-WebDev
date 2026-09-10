@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+*{
+    padding: 5px
+}
+
+body {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    color: red;
+}
+#labs{
+    background-color: beige;
+    border: thin solid black;
+    border-radius: 10px;
+    padding: 0 0 0 20px;
+
+}
+p{
+    border: medium solid royalblue;
+    box-shadow: 10px 10px 5px darkblue
+}
+ul{
+    list-style-type: armenian;
+}
