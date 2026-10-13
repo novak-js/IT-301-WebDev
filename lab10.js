@@ -12,5 +12,5 @@
         } while (true);
 
         let tip = bill_amount * 0.10;
-        console.log(`With a bill of $${bill_amount}, you should tip $${tip}. `);
-        document.write(`With a bill of $${bill_amount}, you should tip $${tip}. `);
+        console.log(`With a bill of $${bill_amount}, your should tip $${tip}. `);
+        document.write(`With a bill of $${bill_amount}, your should tip $${tip}. `);
