@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">What is your name?</label>
+        <input type="text" id="name">
+        <button id="name_button" type="button">Submit</button>
+    </form>
+    <p id="greeting"></p>
+
+    <p>Enter a and b, then the desired operation.</p>
+    <form action="#">
+        <label for="num1">a</label>
+        <input type="number" id="num1">
+        <label for="num1">b</label>
+        <input type="number" id="num2">
+        <br><br>
+        <input type="radio" name="arithmetic" value="Add">Add<br>
+        <input type="radio" name="arithmetic" value="Subtract">Subtract<br>
+        <input type="radio" name="arithmetic" value="Multiply">Multiply<br>
+        <input type="radio" name="arithmetic" value="Divide">Divide<br>
+        <button id="math_button" type="button">Submit</button><button id="clear_button" type="button">Clear All</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        const name = document.getElementById('name');
+        const greeting = document.getElementById('greeting');
+        const a = document.getElementById('num1');
+        const b = document.getElementById('num2');
+
+
+        document.getElementById('name_button').addEventListener('click', function() {
+            greeting.textContent =  `Welcome to my calculator ${name.value}.`;
+        });
+
+        document.getElementById('math_button').addEventListener('click', function() {
+            const operation = document.querySelector(`[name = arithmetic]:checked`);
+            console.log(operation.value)
+            if (operation.value == "Subtract") {
+                result.textContent = Number(a.value) - Number(b.value);
+            }
+            if (operation.value == "Add") {
+                result.textContent = Number(a.value) + Number(b.value);
+            }
+            if (operation.value == "Multiply") {
+                result.textContent = Number(a.value) * Number(b.value);
+            }
+            if (operation.value == "Divide") {
+                result.textContent = Number(a.value) / Number(b.value);
+            }
+        });
+
+        document.getElementById('clear_button').addEventListener('click', function() {
+            document.querySelectorAll('form').forEach(function(form) {
+                form.reset();
+            });
+
+            greeting.textContent = '';
+            result.textContent = '';
+        });
+
+    </script>
+</body>
+</html>
