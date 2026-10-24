@@ -1,0 +1,157 @@
+/* Shared layout, typography, colors, navigation, and controls for every page. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: rgb(150, 140, 215);
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: monospace;
+}
+
+header h1 {
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    justify-content: center;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 600px;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+}
+
+nav a:hover, main a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 16px auto 24px;
+}
+
+/* Reusable panels keep padding and colors consistent across all five pages. */
+.panel {
+    padding: 20px;
+    background-color: rgb(110, 100, 215);
+    border-radius: 10px;
+}
+
+main > .panel {
+    margin-bottom: 20px;
+}
+
+.intro {
+    text-align: center;
+}
+
+main h2, main h3 {
+    margin-bottom: 12px;
+}
+
+main p, main li {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+main ul, main ol {
+    padding-left: 20px;
+}
+
+main a {
+    color: white;
+}
+
+/* Leave room for the sticky navigation when following a topic link. */
+main [id] {
+    scroll-margin-top: 100px;
+}
+
+.topic-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.button-link, button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(75, 60, 155);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    border: solid 3px black;
+    line-height: 1.4;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.button-link:hover, button:hover {
+    background-color: rgb(55, 40, 120);
+}
+
+/* Make keyboard focus visible on links, questions, and form controls. */
+a:focus-visible, summary:focus-visible, input:focus-visible,
+textarea:focus-visible, button:focus-visible {
+    outline: 3px solid gold;
+    outline-offset: 4px;
+}
+
+/* Keep the footer below the content on every page. */
+footer {
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: black;
+}
+
+/* Media query: wrap and space the shared navigation on smaller screens. */
+@media (max-width: 768px) {
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}

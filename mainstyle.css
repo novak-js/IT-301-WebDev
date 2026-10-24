@@ -1,28 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
-*{
-    padding: 5px
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Comic Relief", system-ui;
-    font-weight: 400;
-    font-style: normal;
+    margin: 0;
+    padding: 20px;
+    font-family: "Comic Relief", system-ui, sans-serif;
+    line-height: 1.6;
 }
 
-header{
+header,
+main,
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
     color: red;
 }
-#labs{
-    background-color: beige;
-    border: thin solid black;
-    border-radius: 10px;
-    padding: 0 0 0 20px;
 
+header,
+section,
+aside {
+    margin-bottom: 25px;
 }
-p{
-    border: medium solid royalblue;
-    box-shadow: 10px 10px 5px darkblue
+
+h1,
+h2 {
+    margin: 0 0 10px;
 }
-ul{
-    list-style-type: armenian;
+
+nav a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+#about p {
+    padding: 15px;
+    border: 3px solid royalblue;
+    box-shadow: 5px 5px 5px darkblue;
+}
+
+#labs {
+    padding: 20px;
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 25px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    padding-top: 15px;
+    border-top: 1px solid black;
 }

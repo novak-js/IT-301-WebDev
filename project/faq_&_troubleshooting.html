@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Troubleshooting | Component ConCat</title>
+    <link rel="stylesheet" href="css/univ_style.css">
+    <link rel="stylesheet" href="css/faq_&_troubleshooting_style.css">
+</head>
+<body>
+    <!-- Shared site header and navigation. -->
+    <header>
+        <h1>Component ConCat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="builder.html">Builder</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="faq_&_troubleshooting.html">FAQ & Troubleshooting</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Topic links jump to each group of questions. -->
+        <section class="panel intro" id="intro">
+            <h2>A little help for your next build</h2>
+            <p>Choose a topic, then open a question to read the answer.</p>
+            <div class="topic-links" id="topics">
+                <a href="#before_building">Before building</a>
+                <a href="#assembly">During assembly</a>
+                <a href="#troubleshooting">Troubleshooting</a>
+            </div>
+        </section>
+
+        <!-- Native details elements expand without JavaScript. -->
+        <section class="panel" id="before_building">
+            <h2>Before building</h2>
+            <details open>
+                <summary>How do I know if my parts will work together?</summary>
+                <p>Check the motherboard's CPU support list and required BIOS version, supported memory, and case dimensions. Confirm that the power supply suits your parts. The <a href="components.html">component guide</a> explains these checks.</p>
+            </details>
+            <details>
+                <summary>Do I need a separate graphics card?</summary>
+                <p>A processor with integrated graphics can handle many everyday tasks without a separate card. Check the processor's specifications and your software's requirements. Motherboard display ports alone do not guarantee integrated graphics support.</p>
+            </details>
+            <details>
+                <summary>Do the sample build budgets include a monitor?</summary>
+                <p>No. The <a href="builder.html">sample builds</a> cover the PC tower only. Budget separately for a monitor, keyboard, mouse, and any operating system license you need. The amounts are example targets, not live shopping totals.</p>
+            </details>
+        </section>
+
+        <section class="panel" id="assembly">
+            <h2>During assembly</h2>
+            <details>
+                <summary>Which slots should I use for RAM?</summary>
+                <p>Follow the recommended memory configuration in your motherboard manual. Slot choices depend on the board and the number of modules, so do not assume that any two slots are equivalent.</p>
+            </details>
+            <details>
+                <summary>Do I need to add thermal paste?</summary>
+                <p>Check whether the cooler already has paste applied. If it does, additional paste is usually unnecessary. Otherwise, apply paste as directed by the cooler manufacturer before fitting the cooler.</p>
+            </details>
+            <details>
+                <summary>Can I reuse cables from another modular power supply?</summary>
+                <p>Only use cables approved for your exact PSU model. Modular cables are not universally interchangeable, even when the plugs appear to fit. Check with the manufacturer if you are unsure.</p>
+            </details>
+        </section>
+
+        <section class="panel" id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <p>Before reseating parts or changing internal connections, shut down the PC, switch off the PSU, and unplug it.</p>
+            <details open>
+                <summary>Nothing happens when I press the power button. What should I check?</summary>
+                <ol>
+                    <li>Check the wall outlet, power cable, and PSU switch.</li>
+                    <li>With power disconnected, check the motherboard and CPU power connections.</li>
+                    <li>Use the motherboard manual to check the case power-button connector.</li>
+                </ol>
+            </details>
+            <details>
+                <summary>The fans spin, but there is no picture. What now?</summary>
+                <p>Check monitor power, the selected input, and the display cable. Connect to the graphics card if one is installed. Motherboard video output requires supported integrated graphics. Consult the manual for any diagnostic lights or beep codes.</p>
+            </details>
+            <details>
+                <summary>Why is some of my RAM missing?</summary>
+                <p>Check the detected capacity in BIOS/UEFI. With power disconnected, reseat the modules and verify their slots. Try one module at a time in the manual's recommended slot, and confirm the memory is supported.</p>
+            </details>
+            <details>
+                <summary>My PC reaches BIOS, but the operating system does not start. Why?</summary>
+                <p>A new drive may need an operating system installed. If one is already installed, check that the drive is detected and the correct boot entry is selected. For SATA drives, check data and power connections with the PC unplugged.</p>
+            </details>
+            <details>
+                <summary>What should I check if the CPU gets too hot?</summary>
+                <p>Compare temperatures with the CPU manufacturer's limits. Check fan operation and airflow. If temperatures rise rapidly toward the limit, shut down. With power disconnected, review cooler mounting, protective-film removal, and thermal paste using the cooler's instructions.</p>
+            </details>
+        </section>
+
+        <section class="panel" id="more_help">
+            <h2>Still need a hand?</h2>
+            <p>Revisit the <a href="guides.html">building guide</a> or consult the manual for your exact component.</p>
+            <p>For more detailed startup checks, see <a href="https://rog.asus.com/support/faq/1042632/">ASUS startup troubleshooting</a> and <a href="https://www.amd.com/en/resources/support-articles/faqs/PIBRMATS1.html">AMD boot troubleshooting</a>. Contact the component manufacturer if the problem continues.</p>
+        </section>
+
+        <!-- Simple form with labels, inputs, a button, and a response paragraph. -->
+        <section class="panel" id="feedback">
+            <h2>Try the feedback form</h2>
+            <p>What helped you, and what would you like to learn next?</p>
+            <p>This is a practice form. Your entries stay on this page and are not sent or saved. All fields are required.</p>
+            <form action="#" id="feedback_form">
+                <label for="name">What is your name?</label>
+                <input type="text" id="name" required>
+
+                <label for="email">What is your email?</label>
+                <input type="email" id="email" required>
+
+                <label for="message">What feedback would you like to share?</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button id="name_button" type="submit">Submit</button>
+            </form>
+            <p id="greeting"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Component ConCat — A little less confusion. A lot more confidence.</p>
+    </footer>
+
+    <!-- Show a greeting after the browser checks the required fields. -->
+    <script>
+        document.getElementById("feedback_form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name");
+            document.getElementById("greeting").textContent =
+                "Thank you, " + name.value + "! Your entries passed validation.";
+        });
+    </script>
+</body>
+</html>

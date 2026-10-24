@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Guides | Component ConCat</title>
+    <link rel="stylesheet" href="css/univ_style.css">
+    <link rel="stylesheet" href="css/guides_style.css">
+</head>
+<body>
+    <!-- Shared site header and navigation. -->
+    <header>
+        <h1>Component ConCat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="builder.html">Builder</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="faq_&_troubleshooting.html">FAQ & Troubleshooting</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="panel intro" id="intro">
+            <h2>Build your PC, step by step</h2>
+            <p>Take your time and keep your manuals nearby. This guide follows a basic air-cooled desktop build; your case or cooler may need a different order.</p>
+        </section>
+
+        <!-- A contents list sits beside the guide on larger screens. -->
+        <div id="guide_layout">
+            <aside class="panel" id="contents">
+                <h2>In this guide</h2>
+                <ol>
+                    <li><a href="#preparation">Get ready</a></li>
+                    <li><a href="#motherboard">Prepare the motherboard</a></li>
+                    <li><a href="#cooler">Fit the CPU cooler</a></li>
+                    <li><a href="#case">Move into the case</a></li>
+                    <li><a href="#connections">Finish the connections</a></li>
+                    <li><a href="#startup">Start up your PC</a></li>
+                </ol>
+                <h3>Keep nearby</h3>
+                <ul>
+                    <li>Suitable screwdrivers (I recommend avoiding power tools)</li>
+                    <li>Component manuals</li>
+                    <li>A container for screws</li>
+                </ul>
+            </aside>
+
+            <!-- Each stage has a heading and a short list of actions. -->
+            <article class="panel" id="building_guide">
+                <h2>From components to OS</h2>
+
+                <section class="guide_step" id="preparation">
+                    <h3>1. Get ready</h3>
+                    <ul>
+                        <li>Use a clean, well-lit work surface and organize your parts.</li>
+                        <li>Keep the power supply switched off and unplugged during assembly.</li>
+                        <li>Use appropriate anti-static precautions. Handle boards by their edges and avoid touching contacts or socket pins.</li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="motherboard">
+                    <h3>2. Prepare the motherboard</h3>
+                    <ul>
+                        <li class="note"><strong>I highly recommend</strong> that you read the manual of your specific motherboard before proceeding; the procedure differs for RAM placement, M.2 mounting, and I/O pin orientation depending on the brand.</li>
+                        <li>Follow the socket instructions to align and seat the CPU without forcing it into place.</li>
+                        <li>Install RAM in the slots specified by the motherboard manual, matching the module's notch to the slot.</li>
+                        <li>If using an M.2 SSD, fit it in a supported slot and secure it with the board's screw or retention clip.</li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="cooler">
+                    <h3>3. Fit the CPU cooler</h3>
+                    <ul>
+                        <li>Install the mounting hardware specified for your socket.</li>
+                        <li>Remove any protective film from the cooler's contact surface. Use pre-applied thermal paste, or apply paste according to the cooler instructions.</li>
+                        <li>Secure the cooler evenly and connect its fan to the CPU fan header.</li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="case">
+                    <h3>4. Move into the case</h3>
+                    <ul>
+                        <li>Position motherboard standoffs only beneath matching mounting holes.</li>
+                        <li>Fit a separate rear I/O shield if needed, then mount the motherboard without overtightening its screws.</li>
+                        <li>Install the power supply with its ventilation positioned as the case instructions specify.</li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="connections">
+                    <h3>5. Finish the connections</h3>
+                    <ul>
+                        <li>If using a graphics card, secure it in the recommended PCIe slot and attach its required power cables.</li>
+                        <li>Mount any SATA drives and connect both data and power cables.</li>
+                        <li>Connect motherboard power, CPU power, case buttons, USB, audio, and fans using the manuals. Use PSU-approved cables and keep them clear of fan blades.</li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="startup">
+                    <h3>6. Start up your PC</h3>
+                    <ul>
+                        <li>Check for loose screws and unfinished connections before connecting wall power.</li>
+                        <li>Connect a keyboard and monitor. Use the graphics card's display output if one is installed.</li>
+                        <li>Switch on the PSU and press the case power button. Check detected memory, storage, and CPU temperature in BIOS/UEFI, then install your operating system and updates.</li>
+                        <li class="note">If you're feeling adventurous (or you're just sick of Microsoft...) maybe <a href="https://linuxblog.io/best-linux-distro/">give Tux a try?</a></li>
+                    </ul>
+                </section>
+
+                <section class="guide_step" id="more_help">
+                    <h3>Need another explanation?</h3>
+                    <p>Revisit the <a href="components.html">component guide</a> or check <a href="faq_&_troubleshooting.html">FAQ & Troubleshooting</a>.</p>
+                    <p>For illustrated instructions, see the <a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-build-a-gaming-pc.html">Intel building guide</a> and <a href="https://us.msi.com/Landing/how-to-build-a-pc">MSI building guide</a>.</p>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>Component ConCat — A little less confusion. A lot more confidence.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Guides layout. Shared styles are in univ_style.css. */
+#guide_layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#contents {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+#building_guide {
+    flex: 1;
+    min-width: 0;
+}
+
+.guide_step {
+    border-top: solid 1px black;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.note {
+    font-style: italic;
+}
+
+/* Media query: put the contents above the guide on smaller screens. */
+@media (max-width: 768px) {
+    #guide_layout {
+        flex-direction: column;
+    }
+
+    #contents, #building_guide {
+        width: 100%;
+    }
+}

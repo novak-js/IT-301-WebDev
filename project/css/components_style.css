@@ -1,0 +1,32 @@
+/* Components layout. Shared styles are in univ_style.css. */
+.component {
+    display: flex;
+    gap: 20px;
+}
+
+.component h2 {
+    width: 220px;
+    flex-shrink: 0;
+    padding-right: 20px;
+    margin-bottom: 0;
+    border-right: solid 2px black;
+}
+
+#thanks_jenson {
+    font-weight: bold;
+}
+
+/* Media query: put component headings above the text on small screens. */
+@media (max-width: 768px) {
+    .component {
+        flex-direction: column;
+    }
+
+    .component h2 {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 12px;
+        border-right: none;
+        border-bottom: solid 2px black;
+    }
+}

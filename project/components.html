@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components | Component ConCat</title>
+    <link rel="stylesheet" href="css/univ_style.css">
+    <link rel="stylesheet" href="css/components_style.css">
+</head>
+<body>
+    <!-- Shared site header and navigation. -->
+    <header>
+        <h1>Component ConCat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="builder.html">Builder</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="faq_&_troubleshooting.html">FAQ & Troubleshooting</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Links let readers jump directly to a component. -->
+        <section class="panel intro" id="intro">
+            <h2>Get to know your components</h2>
+            <p>Every part has a job. Learn the basics before choosing the pieces for your purrfect PC.</p>
+            <div class="topic-links" id="part_links">
+                <a href="#cpu">CPU</a>
+                <a href="#motherboard">Motherboard</a>
+                <a href="#gpu">Graphics</a>
+                <a href="#ram">Memory</a>
+                <a href="#storage">Storage</a>
+                <a href="#psu">Power supply</a>
+                <a href="#case">Case</a>
+                <a href="#cooling">Cooling</a>
+            </div>
+        </section>
+
+        <!-- Each component has an explanation and buying consideration. -->
+        <section class="panel component" id="cpu">
+            <h2>Processor (CPU)</h2>
+            <div>
+                <p>The central processing unit runs program instructions. It handles work such as calculations, application tasks, and game logic.</p>
+                <p><strong>What to check:</strong> Choose a processor for your intended workload. Its socket and model must be supported by the motherboard and its BIOS version.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="motherboard">
+            <h2>Motherboard</h2>
+            <div>
+                <p>The motherboard connects the processor, memory, storage, and expansion cards. It also provides connections for devices such as keyboards and USB drives.</p>
+                <p><strong>What to check:</strong> Match the processor socket, memory type, and case size. Check that there are enough ports and expansion slots for your needs.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="gpu">
+            <h2>Graphics (GPU)</h2>
+            <div>
+                <p>The graphics processing unit creates the images shown on your screen. It can also accelerate tasks in supported editing and creative applications. Some processors include integrated graphics; others need a separate graphics card.</p>
+                <p><strong>What to check:</strong> Consider your games, applications, and monitor resolution. A separate card also needs enough case space and the correct power connections.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="ram">
+            <h2>Memory (RAM)</h2>
+            <div>
+                <p>RAM temporarily holds data that running programs are using. It provides working space for applications, but it does not replace the storage used for your files. <span id="thanks_jenson">This will unfortunately be the most expensive component of most builds due to:</span></p>
+                <ul>
+                    <li><a href="https://www.bloomberg.com/graphics/2026-ai-circular-deals/">Circular financing by AI companies</a></li>
+                    <li><a href="https://medium.com/@noahbean3396/nvidia-locked-in-its-memory-supply-through-2030-with-sk-hynix-heres-what-that-means-for-ai-37ec7bed421e">Long-term agreements for memory supply</a></li>
+                    <li><a href="https://moginlawllp.com/dram-antitrust-suit-ai-memory-supply-restrictions/">Alleged price fixing by memory manufacturers</a></li>
+                </ul>
+                <p>The end result is pricing so ridiculous that in the coming years it will likely bring an end to personal computing, self-hosting, and the very idea of owning your own hardware.</p>
+                <p><strong>What to check:</strong> Choose a capacity suited to your applications and multitasking. The memory generation and capacity must be supported by your processor and motherboard.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="storage">
+            <h2>Storage</h2>
+            <div>
+                <p>Storage keeps your operating system, programs, and files when the computer is turned off. Solid-state drives provide fast access, while hard drives are another option for larger file collections.</p>
+                <p><strong>What to check:</strong> Allow room for your files and applications. Check supported drive connections, M.2 drive sizes, and available drive bays.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="psu">
+            <h2>Power supply (PSU)</h2>
+            <div>
+                <p>The power supply converts electricity from the wall into the power used by the PC's components.</p>
+                <p><strong>What to check:</strong> Match the complete system's power needs, connector requirements, and case space. For a modular power supply, use cables approved for that exact model.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="case">
+            <h2>Case</h2>
+            <div>
+                <p>The case holds the parts in place and provides space for airflow, cooling, and cables. Common motherboard sizes include ATX, Micro-ATX, and Mini-ITX.</p>
+                <p><strong>What to check:</strong> Confirm support for your motherboard size, graphics card length, CPU cooler height, and power supply dimensions.</p>
+            </div>
+        </section>
+
+        <section class="panel component" id="cooling">
+            <h2>Cooling</h2>
+            <div>
+                <p>A CPU cooler carries heat away from the processor, while case fans move air through the case. Some processors include a cooler, while others require one separately.</p>
+                <p><strong>What to check:</strong> Confirm the cooler's socket support, mounting hardware, and clearance. Check the case's fan or radiator mounting locations.</p>
+            </div>
+        </section>
+
+        <section class="panel" id="next_steps">
+            <h2>See how the parts come together</h2>
+            <p>Compare the <a href="builder.html">sample builds</a>, then visit the <a href="guides.html">building guides</a> for assembly help.</p>
+            <p>For another explanation of the process, read <a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-build-a-gaming-pc.html">Intel's PC building guide</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Component ConCat — A little less confusion. A lot more confidence.</p>
+    </footer>
+</body>
+</html>

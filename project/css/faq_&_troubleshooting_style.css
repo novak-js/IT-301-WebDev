@@ -1,0 +1,72 @@
+/* FAQ layout and feedback form. Shared styles are in univ_style.css. */
+details {
+    border-top: solid 1px black;
+    padding: 10px 0;
+}
+
+summary {
+    padding: 8px;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+details p, details ol {
+    margin-top: 12px;
+}
+
+details ol {
+    padding-left: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: solid 2px black;
+    border-radius: 5px;
+    font: inherit;
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    align-self: flex-start;
+}
+
+#greeting {
+    margin-top: 16px;
+}
+
+/* Media query: stack topic links and reduce panel padding on small screens. */
+@media (max-width: 768px) {
+    .panel {
+        padding: 16px;
+    }
+
+    #topics {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
