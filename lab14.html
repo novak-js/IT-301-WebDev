@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Profile</title>
+</head>
+<body>
+    <h1>Random Profile</h1>
+    <p>Welcome to my profile website</p>
+
+    <script>
+        const site = 'https://randomuser.me/api/';
+
+        let img = document.createElement('img');
+        let bttn = document.createElement('button');
+        let card = document.createElement('div');
+        let userName = document.createElement('h2');
+        let email = document.createElement('p');
+        let phone = document.createElement('p');
+
+        bttn.type = 'button';
+        bttn.textContent = 'Generate Profile';
+
+        let form = document.createElement('form');
+        form.action = '#';
+        form.appendChild(bttn);
+        document.body.appendChild(form);
+
+        const getProfile = async () => {
+            try {
+                let response = await fetch(site);
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+                let result = await response.json();
+                let user = result.results[0];
+
+                img.src = user.picture.large;
+                img.alt = 'profile picture';
+                img.style.width = '150px';
+
+                userName.textContent = user.name.first + ' ' + user.name.last;
+                email.textContent = 'Email: ' + user.email;
+                phone.textContent = 'Phone: ' + user.phone;
+
+                card.style.border = '1px solid black';
+                card.style.padding = '20px';
+                card.style.width = '300px';
+                card.appendChild(img);
+                card.appendChild(userName);
+                card.appendChild(email);
+                card.appendChild(phone);
+                document.body.appendChild(card);
+            } catch (reason) {
+                console.log(reason);
+            }
+        };
+
+        bttn.addEventListener('click', getProfile);
+        getProfile();
+    </script>
+</body>
+</html>
