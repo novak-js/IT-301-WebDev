@@ -13,6 +13,50 @@ body {
 
 header,
 main,
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-container figure, .pc-build {
+    flex: 1 1 250px;
+    min-width: 0;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background-color: rgb(184, 106, 185);
+    border: 2px dashed royalblue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pc-build h3 {
+    margin: 0 0 10px;
+}
+
+.pc-build p:last-child {
+    margin: 15px 0 0;
+}
+
 footer {
     max-width: 1000px;
     margin: 0 auto;
@@ -50,7 +94,7 @@ p {
 
 #labs {
     padding: 20px;
-    background-color: beige;
+    background-color: rgb(184, 106, 185);
     border: 1px solid black;
     border-radius: 10px;
 }
