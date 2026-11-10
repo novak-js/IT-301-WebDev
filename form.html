@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16</title>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #form * {
+            margin: 5px;
+            padding: 5px;
+        }
+        .rules {
+            display: none;
+        }
+        .showrule {
+            display: block;
+            color: red;
+        }
+        h2 {
+            color: black;
+        }
+        .valid {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Jane Doe" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="janedoe@gmail.com" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Chick3n$123" required>
+
+        <div class="rules">
+            <h2>Password Rules:</h2>
+            <ul>
+                <li>Must be six characters or greater</li>
+                <li>Must include a special character (!@#$)</li>
+                <li>Must include an uppercase letter (A-Z)</li>
+            </ul>
+        </div>
+
+        <button id="submit">Submit</button>
+    </form>
+    <script>
+        let form = document.getElementById("form");
+        let password = document.getElementById("password");
+        let passwordRules = document.querySelector(".rules");
+        let ruleItems = document.querySelectorAll(".rules li");
+
+        let submitForm = (event) => {
+            event.preventDefault();
+
+            const passwordLength = password.value.length > 6;
+            const passwordSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
+            const passwordUpper = /[A-Z]/.test(password.value);
+
+            if (passwordLength && passwordSpecial && passwordUpper) {
+                window.location.href = "success.html";
+            } else {
+                alert("Password does not meet the requirements.");
+            }
+        };
+
+        let passwordCheck = () => {
+            const passwordLength = password.value.length >= 6;
+            const passwordSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
+            const passwordUpper = /[A-Z]/.test(password.value);
+            const emptyPassword = password.value.length == 0;
+
+            passwordRules.classList.toggle("showrule", !emptyPassword);
+            ruleItems[0].classList.toggle("valid", passwordLength)
+            ruleItems[1].classList.toggle("valid", passwordSpecial)
+            ruleItems[2].classList.toggle("valid", passwordUpper)
+
+
+        };
+
+        form.addEventListener('submit', submitForm)
+        password.addEventListener('input', passwordCheck)
+    </script>
+</body>
+</html>
