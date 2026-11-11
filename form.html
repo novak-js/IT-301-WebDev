@@ -60,7 +60,7 @@
         let submitForm = (event) => {
             event.preventDefault();
 
-            const passwordLength = password.value.length > 6;
+            const passwordLength = password.value.length >= 6;
             const passwordSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
             const passwordUpper = /[A-Z]/.test(password.value);
 
@@ -78,9 +78,9 @@
             const emptyPassword = password.value.length == 0;
 
             passwordRules.classList.toggle("showrule", !emptyPassword);
-            ruleItems[0].classList.toggle("valid", passwordLength)
-            ruleItems[1].classList.toggle("valid", passwordSpecial)
-            ruleItems[2].classList.toggle("valid", passwordUpper)
+            ruleItems[0].classList.toggle("valid", passwordLength);
+            ruleItems[1].classList.toggle("valid", passwordSpecial);
+            ruleItems[2].classList.toggle("valid", passwordUpper);
 
 
         };
